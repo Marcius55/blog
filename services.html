@@ -4,81 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../services.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="/icons/logo.png" type="image/png">
 </head>
 <body>
-
   <div class="header">
     <nav>
   <ul class="sidebar">
     <li onclick="hideSidebar()"><a href="#" class="close-icon"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" fill="#F8F8FF" viewBox="0 0 24 24"><path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/></svg></a></li>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="services.html">My Services</a></li>
-    <li><a href="about-me.html">About me</a></li>
-    <li><a href="support.html">Support me</a></li>
-    <li><a href="about.html">Photo gallery</a></li>
+    <li><a id="nav_home" href="home.html">Home</a></li>
+    <li><a href="gallery.html">Photo gallery</a></li>
+    <li><a href="services.html">My services</a></li>
   </ul>
   <ul>
     <li>
     <div class="logo-text">
-    <img class="logo-img" src="logo.png" alt="">
-    <h1 class="nav-title">Chirping Thrush</h1>
+      <a href="home.html">
+    <img id="logo-home-black" class="logo-img logo-img-black" src="../icons/logo.png" alt="logo-black" style="display: block;">
+    </a>
+    <h1 class="nav-title">Singing Blackbird</h1>
     </div>
-        </li>
+    </li>
     <li class="hideOnMobile"><a href="home.html">Home</a></li>
-    <li class="hideOnMobile"><a href="services.html">My Services</a></li>
-    <li class="hideOnMobile"><a href="about-me.html">About me</a></li>
-    <li class="hideOnMobile"><a href="support.html">Support me</a></li>
     <li class="hideOnMobile"><a href="gallery.html">Photo gallery</a></li>
+    <li class="hideOnMobile"><a href="services.html">My services</a></li>
     <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" fill="#FFF" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="#FFF" stroke-width="2" stroke-linecap="round"/></svg></a>
     </li>
   </ul>
-</nav>
-</div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="services.css">
-</head>
-<body>
-    <div class="services-container">
-        <h1 class="services-title">My Services</h1>
-        <p class="services-intro">I offer a range of creative and professional services to help you capture, create, and communicate your story. Whether you need stunning visuals, compelling content, or expert editing, I'm here to help!</p>
-        <div class="services-list">
-            <div class="service-card">
-                <img src="images/main-image.png" alt="Events/Press Photography" class="service-icon">
-                <h2>Events & Press Photography</h2>
-                <p>Capture the energy and emotion of your events with professional photography. From press conferences to private gatherings, I deliver high-quality images that tell your story.</p>
+    <div class="header-wrap">
+    </div>
+    </div>
+
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My services</h2>
+                <p class="section-description">From concept to completion, I deliver exceptional media solutions that drive results and exceed expectations.</p>
             </div>
-            <div class="service-card">
-                <img src="images/main-image.png" alt="Events/Interviews/Video Filming" class="service-icon">
-                <h2>Events, Interviews & Video Filming</h2>
-                <p>Document your events and interviews with cinematic video coverage. I handle everything from planning to filming, ensuring every important moment is recorded.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/main-image.png" alt="Video and Photo Editing" class="service-icon">
-                <h2>Professional Video & Photo Editing</h2>
-                <p>Transform raw footage and images into polished, engaging content. I offer expert editing services to enhance your visuals and bring your vision to life.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/main-image.png" alt="Writing Services" class="service-icon">
-                <h2>Articles, Scripts & Social Media Posts</h2>
-                <p>Need words that work? I write articles, scripts, and social media posts tailored to your audience, helping you communicate clearly and effectively.</p>
+
+            <div class="services-container">
+                <!-- First Row: Photography & Video Production -->
+                <div class="services-row">
+                    <div class="service-card fade-in-up">
+                        <div class="service-header">
+                            <div class="service-icon">📸</div>
+                            <h3 class="service-title">Events & Press Photography</h3>
+                        </div>
+                        <p class="service-description">
+                            Professional event documentation and press photography that captures the essence of your most important moments with artistic precision and journalistic integrity.
+                        </p>
+                          <div class="services-learn-more">
+                        <a href="service.html" class="learn-more-btn">Learn more about this service</a>
+                    </div>
+                      
+                    </div>
+
+                    <div class="service-card fade-in-up">
+                        <div class="service-header">
+                            <div class="service-icon">🎬</div>
+                            <h3 class="service-title">Interviews & Video Production</h3>
+                        </div>
+                        <p class="service-description">
+                            Complete video production services from pre-production planning to final delivery, specializing in corporate interviews, promotional content, and brand storytelling.
+                        </p>
+                          <div class="services-learn-more">
+                        <a href="service.html" class="learn-more-btn">Learn more about this service</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Second Row: Editing & Content Writing -->
+                <div class="services-row">
+                    <div class="service-card fade-in-up">
+                        <div class="service-header">
+                            <div class="service-icon">⚡</div>
+                            <h3 class="service-title">Professional Editing</h3>
+                        </div>
+                        <p class="service-description">
+                            Expert post-production services that transform raw footage and images into polished, professional content ready for broadcast, web, or print distribution.
+                        </p>
+                          <div class="services-learn-more">
+                        <a href="service.html" class="learn-more-btn">Learn more about this service</a>
+                    </div>
+                    </div>
+
+                   
+
+                    <div class="service-card fade-in-up">
+                        <div class="service-header">
+                            <div class="service-icon">✍️</div>
+                            <h3 class="service-title">Content Writing</h3>
+                        </div>
+                        <p class="service-description">
+                            Strategic content creation that amplifies your message across all platforms. From compelling articles to engaging social media campaigns that drive engagement.
+                        </p>
+                          <div class="services-learn-more">
+                        <a href="service.html" class="learn-more-btn">Learn more about this service</a>
+                    </div>
+                    </div>
+
+                    
+                </div>
+                 <div class="services-row">
+                    <div class="service-card fade-in-up">
+                        <div class="service-header">
+                            <div class="service-icon">💻</div>
+                            <h3 class="service-title">Web Design & Frontend Development</h3>
+                        </div>
+                        <p class="service-description">
+                            
+                           Simple, clean websites built with HTML, CSS, and JavaScript. Focusing on user-centered design using Figma and UI/UX best practices
+                        </p>
+                        <div class="services-learn-more">
+                        <a href="#" class="learn-more-btn">Learn more about this service</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </section>
 
   <footer>
         <div class="brand">
             <p class="brand-text">BRAND</p>
             <div class="bottom-line"></div>
-            <img class="logo-img" src="/logo.png" alt="logo-image">
+            <img class="logo-img" src="icons/logo.png" alt="logo-image">
         </div>
         <div class="navigation">
             <p class="brand-text">NAVIGATION</p>
@@ -86,8 +138,6 @@
             <ul class="listed-footer">
                 <li><a href="home.html">Home</a></li>
                <li><a href="services.html">My services</a></li>
-               <li><a href="about-me.html">About me</a></li>
-               <li><a href="support.html">Support me</a></li>
               <li><a href="gallery.html">Photo gallery</a></li> 
             </ul>
         </div>
@@ -95,8 +145,8 @@
         <p class="brand-text">SOCIAL</p>
         <div class="bottom-line"></div>
         <div class="social-media">
-        <a href="https://www.facebook.com/aistis.pucinskas"><img src="Facebook.png"></a>
-        <a href="https://www.linkedin.com/in/aistis-pu%C4%8Dinskas-745a05252/"><img src="linkedin.png"></a>
+        <a href="https://www.facebook.com/aistis.pucinskas"><img src="icons/Facebook.png"></a>
+        <a href="https://www.linkedin.com/in/aistis-pu%C4%8Dinskas-745a05252/"><img src="icons/linkedin.png"></a>
       </div> 
       </div>
     <div class="contact">
@@ -107,9 +157,5 @@
     </footer>
 
     <script src="home.js"></script>
-</body>
-</html>
- </body>
- </html>
 </body>
 </html>

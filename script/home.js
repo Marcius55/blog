@@ -30,4 +30,8 @@ function copyToClipboard(id) {
   });
 }
 
+document.getElementById('logo-home').onclick = function() {
+  window.location.href = 'home.html';
+};
+
 

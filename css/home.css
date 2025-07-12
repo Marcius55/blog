@@ -1,3 +1,24 @@
+/* CTA Button for About Me */
+.cta-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 32px;
+  background: var(--color-secondary);
+  color: var(--color-text-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.12);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
 body {
     margin: 0;
     padding: 0;
@@ -34,20 +55,21 @@ body {
 }
 
 .header nav ul li a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 100%; height: 2px;
-  background: var(--color-text-white);
-  opacity: 1;
-  transform: translate3d(-100%, 0, 0);
-  transition: transform 0.3s;
+content: "";
+display: block;
+position: absolute;
+left: 0; bottom: 0;
+width: 100%; height: 2px;
+background: var(--color-text-white);
+opacity: 0;
+transform: translate3d(-100%, 0, 0);
+transition: transform 0.3s, opacity 0.3s;
 }
 
 .header nav ul li a:hover::after,
 .header nav ul li a:focus::after {
   transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 .header, nav, .sidebar, nav ul, nav li {
@@ -69,7 +91,7 @@ body {
   white-space: nowrap;
   border-right: 1px solid;
   width: 22ch;
-  animation: typing 5s steps(25, end) forwards,
+  animation: typing 1.9s steps(25, end) forwards,
   blink 1s step-end infinite 1s;
 }
 
@@ -97,13 +119,12 @@ body {
 
 .about-me-img {
   display: block;
-  width: 100%;           /* Responsive width */
-  max-width: 450px;      /* Limit max size on desktop */
-  aspect-ratio: 1/1;     /* Always square */
-  border-radius: 50%;
+  width: 100%;
   object-fit: cover;
   margin: 0 auto;
-  height: auto;          /* Let height scale with width */
+  border-radius: 50%;
+  max-height: 500px;
+  transform: scaleX(-1);
 }
 
 @media (max-width: 900px) {
@@ -261,7 +282,7 @@ transition: 0.2s;
 }
 
 .blog-image-3 {
-  background-image: url('/images/challenges-img.png');
+  background-image: url('/images/challenges-img.jpg');
 }
 
 .blog-image-4 {
@@ -273,7 +294,7 @@ transition: 0.2s;
 }
 
 .blog-image-6 {
-  background-image: url('/images/ildiko-img.png');
+  background-image: url('/images/ildiko-head.jpg');
 }
 
 .blog-image,
@@ -294,7 +315,7 @@ transition: 0.2s;
 .blog-image-2,
 .blog-image-4,
 .blog-image-6 {
-    min-width: 650px;
+  min-width: 650px;
   width: 48%;
   height: 380px;
   background-size: cover;
@@ -336,7 +357,6 @@ transition: 0.2s;
   max-width: 600px;
   margin: 40px auto;
   font-family: sans-serif;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .bank-header {
@@ -410,11 +430,7 @@ footer {
     color: var(--color-text-secondary);
 }
 
-.bottom-line {
-    border-bottom: 1.2px solid var(--color-text-white);
-    width: 100%;
-    margin: 0;
-}
+
 
 .logo-img {
     width: 90px;
@@ -436,7 +452,7 @@ footer {
 }
 
 li a {
-  text-decoration: underline;
+  text-decoration: none;
   transition: 0.25s;
 }
 
@@ -475,9 +491,11 @@ li {
   transition: 0.3s;
 }
 
+
 .bmc-button {
-  display: inline-block;
-  padding: 10px 20px;
+  display: block;
+  margin: 12px auto 0 auto;
+  padding: 16px 20px;
   background-color: var(--color-secondary);
   color: var(--color-text-white);
   text-decoration: none;
@@ -485,7 +503,7 @@ li {
   font-weight: bold;
   font-family: sans-serif;
   transition: background 0.3s ease;
-  margin-top: 12px;
+  text-align: center;
 }
 
 .bmc-button:hover {
@@ -663,7 +681,8 @@ nav li:first-child {
   .blog-image-2,
   .blog-image-3,
   .blog-image-4,
-  .blog-image-5 {
+  .blog-image-5,
+  .blog-image-6 {
     width: 100%;
     min-width: 0;
     height: 220px;
@@ -707,8 +726,9 @@ nav li:first-child {
   .blog-image-2,
   .blog-image-3,
   .blog-image-4,
-  .blog-image-5 {
-    height: 140px;
+  .blog-image-5,
+  .blog-image-6 {
+    height: 280px;
   }
 }
 
